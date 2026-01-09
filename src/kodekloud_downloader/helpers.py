@@ -113,6 +113,9 @@ def download_video(url: str, output_path: Path, cookie: str, quality: str) -> No
         "cookiefile": cookie,
         "merge_output_format": "mkv",
         "writesubtitles": True,
+	#"sub-langs": "en.*,fr.*",
+	#"subtitleslangs": ['all'],
+	"subtitleslangs": ['fr.*','en.*'],
         "no_write_sub": True,
         "http_headers": headers,
     }

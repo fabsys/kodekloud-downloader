@@ -40,6 +40,7 @@ class IncludesSection(BaseModel):
     quiz_lessons: bool
     quiz_lesson_count: int
     mock_exams: bool
+    #community_support: bool
     community_support: Optional[bool] = None
     hours_of_video: int
 
@@ -54,10 +55,10 @@ class CourseDetail(BaseModel):
     difficulty_level: Optional[str]
     categories: List[Category]
     plan: str
-    excerpt: Optional[str]
+    excerpt: str
     description: str
     lessons_count: int
-    userback_id: Optional[str]
+    userback_id: str
     hidden: bool
     modules: List[Module]
     includes_section: IncludesSection
