@@ -32,7 +32,8 @@ def fetch_course_detail(slug: str) -> CourseDetail:
     response = requests.get(url)
     response.raise_for_status()  # Raise an exception for HTTP errors
     data = response.json()
-
+    if data.get("excerpt") is None:
+        data["excerpt"] = ""
     return CourseDetail(**data)
 
 
